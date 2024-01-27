@@ -21,6 +21,10 @@ int main() {
 	// Test Case 3
 	std::cout << "Input: head = [1], pos = -1\nExpected Output: false\nActual Output: "
 		<< hasCycle(buildCyclicalList({ 1 }, -1)) << "\n\n";
+
+	// Test Case 4
+	std::cout << "Input: head = [], pos = -1\nExpected Output: false\nActual Output: "
+		<< hasCycle({}) << "\n\n";
 	
 	return 0;
 }
