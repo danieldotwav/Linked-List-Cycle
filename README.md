@@ -41,10 +41,31 @@ bool hasCycle(ListNode* head) {
 }
 
 ListNode* buildCyclicalList(const std::vector<int>& values, int cycleIndex) {
-    // Implementation details...
+	if (values.empty()) { return nullptr; }
+	
+	ListNode dummy(0);
+	ListNode* current = &dummy;
+	std::vector<ListNode*> nodes;
+
+	for (int element : values) {
+		current->next = new ListNode(element);
+		current = current->next;
+		nodes.push_back(current);
+	}
+
+	// Create a cycle by linking the tail to the node specified by the cycleIndex
+	if (cycleIndex >= 0 && cycleIndex < values.size()) {
+		current->next = nodes[cycleIndex];
+	}
+
+	return dummy.next;
 }
 
 void deleteList(ListNode* head) {
-    // Implementation details...
+	while (head != nullptr) {
+		ListNode* temp = head;
+		head = head->next;
+		delete temp;
+	}
 }
 ```
