@@ -25,6 +25,10 @@ int main() {
 	// Test Case 4
 	std::cout << "Input: head = [], pos = -1\nExpected Output: false\nActual Output: "
 		<< hasCycle({}) << "\n\n";
+
+	// Test Case 5
+	std::cout << "Input: head = [0], pos = 1\nExpected Output: false\nActual Output: "
+		<< hasCycle({}) << "\n\n";
 	
 	return 0;
 }
