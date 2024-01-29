@@ -69,3 +69,12 @@ void deleteList(ListNode* head) {
 	}
 }
 ```
+
+## How to Use
+1. Include the Necessary Files: Ensure that ListNode.h and the implementation files for the cycle detection algorithm are included in your project.
+
+2. Create a Linked List: Utilize buildCyclicalList to create a linked list. You can specify node values and the position to introduce a cycle (if needed).
+
+3. Detect a Cycle: Call hasCycle with your linked list as the argument to check for the presence of a cycle. The function returns true if a cycle is detected and false otherwise.
+
+4. Memory Management: After testing, use deleteList to properly deallocate memory used by the linked list, especially if it's non-cyclical.
